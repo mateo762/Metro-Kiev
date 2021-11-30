@@ -1,0 +1,230 @@
+{
+    "lines": [
+        {
+            "color": "red",
+            "number": 1,
+            "stations": [
+                {
+                    "id": 110,
+                    "name": "Akademmistechko"
+                },
+                {
+                    "id": 111,
+                    "name": "Zhytomyrska"
+                },
+                {
+                    "id": 112,
+                    "name": "Sviatoshyn"
+                },
+                {
+                    "id": 113,
+                    "name": "Nyvky"
+                },
+                {
+                    "id": 114,
+                    "name": "Beresteiska"
+                },
+                {
+                    "id": 115,
+                    "name": "Shuliavska"
+                },
+                {
+                    "id": 116,
+                    "name": "Politechnichnyl-instytut"
+                },
+                {
+                    "id": 117,
+                    "name": "Vokzalna"
+                },
+                {
+                    "id": 118,
+                    "name": "Universytet"
+                },
+                {
+                    "id": 119,
+                    "name": "Teatralna"
+                },
+                {
+                    "id": 120,
+                    "name": "Khreshchatyk"
+                },
+                {
+                    "id": 121,
+                    "name": "Arsenalna"
+                },
+                {
+                    "id": 122,
+                    "name": "Dnipro"
+                },
+                {
+                    "id": 123,
+                    "name": "Hidropark"
+                },
+                {
+                    "id": 124,
+                    "name": "Livoberezhna"
+                },
+                {
+                    "id": 125,
+                    "name": "Darnytsia"
+                },
+                {
+                    "id": 126,
+                    "name": "Chernihivska"
+                },
+                {
+                    "id": 127,
+                    "name": "Lisova"
+                }
+            ]
+        },
+        {
+            "color": "blue",
+            "number": 2,
+            "stations": [
+                {
+                    "id": 210,
+                    "name": "Heroiv-Dnipra"
+                },
+                {
+                    "id": 211,
+                    "name": "Minska"
+                },
+                {
+                    "id": 212,
+                    "name": "Obolon"
+                },
+                {
+                    "id": 213,
+                    "name": "Petrivka"
+                },
+                {
+                    "id": 214,
+                    "name": "Tarasa-Shevchenka"
+                },
+                {
+                    "id": 215,
+                    "name": "Kontraktova-ploshcha"
+                },
+                {
+                    "id": 216,
+                    "name": "Poshtova-ploshcha"
+                },
+                {
+                    "id": 217,
+                    "name": "Maidan-Nezalezhnosti"
+                },
+                {
+                    "id": 218,
+                    "name": "Ploshscha-Lva-Tolstoho"
+                },
+                {
+                    "id": 219,
+                    "name": "Olimpilska"
+                },
+                {
+                    "id": 220,
+                    "name": "Palats-Ukrayina"
+                },
+                {
+                    "id": 221,
+                    "name": "Lybidksa"
+                },
+                {
+                    "id": 222,
+                    "name": "Demiivska"
+                },
+                {
+                    "id": 223,
+                    "name": "Holosiivlska"
+                },
+                {
+                    "id": 224,
+                    "name": "Vasylkivska"
+                },
+                {
+                    "id": 225,
+                    "name": "Vystavkovyi-tsentr"
+                },
+                {
+                    "id": 226,
+                    "name": "Ipodrom"
+                },
+                {
+                    "id": 227,
+                    "name": "Teremky"
+                }
+            ]
+        },
+        {
+            "color": "green",
+            "number": 3,
+            "stations": [
+                {
+                    "id": 310,
+                    "name": "Syrets"
+                },
+                {
+                    "id": 311,
+                    "name": "Dorohozhychi"
+                },
+                {
+                    "id": 312,
+                    "name": "Lukianivska"
+                },
+                {
+                    "id": 314,
+                    "name": "Zoloti-vorota"
+                },
+                {
+                    "id": 315,
+                    "name": "Palats-sportu"
+                },
+                {
+                    "id": 316,
+                    "name": "Klovska"
+                },
+                {
+                    "id": 317,
+                    "name": "Pecherska"
+                },
+                {
+                    "id": 318,
+                    "name": "Druzhby-narodiv"
+                },
+                {
+                    "id": 319,
+                    "name": "Vydubychi"
+                },
+                {
+                    "id": 321,
+                    "name": "Slavutych"
+                },
+                {
+                    "id": 322,
+                    "name": "Osokorky"
+                },
+                {
+                    "id": 323,
+                    "name": "Pozniaky"
+                },
+                {
+                    "id": 324,
+                    "name": "Kharkivska"
+                },
+                {
+                    "id": 325,
+                    "name": "Vyrlytsia"
+                },
+                {
+                    "id": 326,
+                    "name": "Boryspilska"
+                },
+                {
+                    "id": 327,
+                    "name": "Chervonyi-khutir"
+                }
+            ]
+        }
+    ]
+}
