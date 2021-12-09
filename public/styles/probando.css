@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#contenedor{
+    width: 1700px;
+    height: 800px;
+    margin: 1em auto;
+    padding: 0.5em;
+    border-radius: 1em;
+    margin-top: 3em;
+}
+
+#contenido{
+    height: 99%;
+    width: 25%;
+    float: left;
+    margin: 0.5em;
+    margin: 2em;
+}
+#mapa{
+    height: 768px;
+    width: 1024px;
+    float: right;
+}
+
+#metro{
+    height: 10%;
+    width: 95%;
+    float: left;
+    margin: 0.5em;
+}
+
+#org{
+    height: 10%;
+    width: 95%;
+    float: left;
+    margin: 0.5em;
+}
+#textoOrg{ 
+    height: 100%;
+    width: 20%;
+    float: left;
+}
+#cajaOrg{
+    height: 25%;
+    width: 75%;
+    float: right;
+}
+
+#dest{
+    height: 10%;
+    width: 95%;
+    float: left;
+    margin: 0.5em;
+}
+#opciones{
+    height: 5%;
+    width: 95%;
+    float: left;
+    margin: 0.5em;
+    margin-bottom: 2em;
+}
+#dist{
+    height: 10%;
+    width: 95%;
+    float: left;
+    margin: 0.5em;
+}
+#trans{
+    height: 10%;
+    width: 95%;
+    float: left;
+    margin: 0.5em;
+}
+#calcular{
+    height: 5%;
+    width: 95%;
+    float: left;
+    margin: 0.5em;
+    margin-bottom: 1em;
+}
+#limpiar{
+    height: 5%;
+    width: 95%;
+    float: left;
+    margin: 0.5em;
+}
+
+#button{
+    height: 95%;
+    width: 95%;
+}
+
+#clear{
+    height: 95%;
+    width: 95%;
+}
+#criterio{
+    height: 95%;
+    width: 95%;
+}

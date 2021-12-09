@@ -44,7 +44,7 @@ class Algorithm {
         let resultado = this.listaAbierta[0];
         if (this.listaAbierta.length > 1) {
             for (let i of this.listaAbierta) {
-                if (this.graph[`${i}A`]['F'] < this.graph[`${resultado}A`]['F']) {
+                if (this.graph[`${i}A`]['G'] < this.graph[`${resultado}A`]['G']) {
                     resultado = i;
                 }
             }

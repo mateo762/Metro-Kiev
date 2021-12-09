@@ -4,10 +4,9 @@ const select = document.querySelector("#criterio");
 const map = document.querySelector(".img-metro");
 const button = document.querySelector("#button");
 const clear = document.querySelector("#clear");
-const textOrigen = document.querySelector("#origen");
-const textDestino = document.querySelector("#destino");
+const textOrigen = document.querySelector("#origenText");
+const textDestino = document.querySelector("#destinoText");
 
-const camino = document.querySelector("#camino");
 const distancia = document.querySelector("#distancia");
 const transbordo = document.querySelector("#transbordo");
 
@@ -16,7 +15,7 @@ let ready = false;
 let origen = undefined;
 let destino = undefined;
 
-const colorOrigen = "ff0000";
+const colorOrigen = "0389ff";
 const colorDestino = "0040ff";
 let color = colorOrigen;
 
@@ -25,7 +24,7 @@ let color = colorOrigen;
 $(function () {
     $('.img-metro').maphilight({
         fillColor: color,
-        fillOpacity: 0.6,
+        fillOpacity: 0.75,
         stroke: false,
         neverOn: true
     });
@@ -35,10 +34,10 @@ $(function () {
             if (isClicked) {
                 if (estacion.station === "origen") {
                     origen = undefined;
-                    textOrigen.textContent = "Origen:";
+                    textOrigen.textContent = "";
                 } else if (estacion.station === "destino") {
                     destino = undefined;
-                    textDestino.textContent = "Destino:";
+                    textDestino.textContent = "";
                 }
                 checkValid();
                 estacion.station = undefined;
@@ -47,7 +46,7 @@ $(function () {
             } else {
                 if (origen && !destino) {
                     destino = estacion.id;
-                    textDestino.textContent = "Destino: " + destino.toString();
+                    textDestino.textContent = destino.toString();
                     estacion.station = "destino";
                     checkValid();
                     isClicked = {};
@@ -55,7 +54,7 @@ $(function () {
                     $(this).data('maphilight', isClicked).trigger('alwaysOn.maphilight');;
                 } else if (!destino || (destino && !origen)) {
                     origen = estacion.id;
-                    textOrigen.textContent = "Origen: " + origen.toString();
+                    textOrigen.textContent = origen.toString();
                     estacion.station = "origen";
                     checkValid();
                     isClicked = {};
@@ -71,9 +70,10 @@ $(function () {
         clearMap();
         const algorithm = new Algorithm(origen, destino, select.value);
         const [path, distance, transbordos] = algorithm.principal();
-        camino.textContent = path;
-        distancia.textContent = distance + "km";
+        //camino.textContent = path;
+        distancia.textContent = distance.toFixed(2) + "km";
         transbordo.textContent = transbordos;
+        transbordo.textContent.fontsize(4);
         for (let estacion of path) {
             let isClicked = $(`#${estacion}`).data("maphilight");
             isClicked = {};
@@ -81,6 +81,7 @@ $(function () {
             $(`#${estacion}`).data('maphilight', isClicked).trigger('alwaysOn.maphilight');
         }
     })
+
 
     clear.addEventListener("click", function () {
         for (let estacion of estaciones) {
@@ -118,8 +119,8 @@ const reset = () => {
     origen = undefined;
     destino = undefined;
     button.disabled = true;
-    textOrigen.textContent = "Origen:"
-    textDestino.textContent = "Destino:"
+    textOrigen.textContent = ""
+    textDestino.textContent = ""
 }
 
 const checkValid = () => {
@@ -129,3 +130,4 @@ const checkValid = () => {
         button.disabled = true;
     }
 }
+

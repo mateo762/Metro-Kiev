@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/probando.css">
+</head>
+
+<body>
+    <div id="contenedor" class="border border-dark rounded">
+        <div id="contenido">
+            <div id="metro">
+                <h2 class="text-start fs-1">
+                    <font size="10">Metro de Kiev</font>
+                </h2>
+            </div>
+            <div id="org">
+                <div id="textOrg">
+                    <h2 id="origen" class="fs-2">
+                        <font size="4">Origen: <span id="origenText"></span>
+                        </font>
+                    </h2>
+                </div>
+                <!--<div id="cajaOrg" class="border border-dark rounded">
+                </div>-->
+            </div>
+            <div id="dest">
+                <h2 id="destino" class="fs-2">
+                    <font size="4">Destino: <span id="destinoText"></span>
+                    </font>
+                </h2>
+            </div>
+            <div id="opciones">
+                <select name="criterio" id="criterio" class="">
+                    <option value="distancia" selected>Distancia</option>
+                    <option value="transbordo">Transbordo</option>
+                </select>
+            </div>
+            <div id="dist">
+                <h2 id="d" class="">
+                    <font size="4">Distancia: </font><span id="distancia"></span>
+                </h2>
+            </div>
+            <div id="trans">
+                <h2 id="t" class="">
+                    <font size="4">Transbordos: </font><span id="transbordo"></span>
+                </h2>
+            </div>
+            <div id="calcular">
+                <button id="button" class="btn btn-primary" disabled>CALCULAR</button>
+            </div>
+            <div id="limpiar">
+                <button id="clear" class="btn btn-secondary">CLEAR</button>
+            </div>
+        </div>
+        <img src="metro.svg" usemap="#image-map" alt="" class="img-metro float-end me-5">
+        <map name="image-map" class="map">
+            <area target="_parent" alt="" title="" href="#" coords="15.5,404.5,13" shape="circle" class="estacion"
+                id="110" name="Akademmistechko">
+            <area target="_parent" alt="" title="" href="#" coords="65.5,404.5,13" shape="circle" class="estacion"
+                id="111" name="Zhytomyrska">
+            <area target="_parent" alt="" title="" href="#" coords="114.5,404.5,13" shape="circle" class="estacion"
+                id="112" name="Sviatoshyn">
+            <area target="_parent" alt="" title="" href="#" coords="164.5,404.5,13" shape="circle" class="estacion"
+                id="113" name="Nyvky">
+            <area target="_parent" alt="" title="" href="#" coords="213.5,404.5,13" shape="circle" class="estacion"
+                id="114" name="Beresteiska">
+            <area target="_parent" alt="" title="" href="#" coords="263,404.5,13" shape="circle" class="estacion"
+                id="115" name="Shuliavska">
+            <area target="_parent" alt="" title="" href="#" coords="317,404.5,13" shape="circle" class="estacion"
+                id="116" name="Politechnichnyl-instytut">
+            <area target="_parent" alt="" title="" href="#" coords="377.25,404.5,13" shape="circle" class="estacion"
+                id="117" name="Vokzalna">
+            <area target="_parent" alt="" title="" href="#" coords="426,404.5,13" shape="circle" class="estacion"
+                id="118" name="Universytet">
+            <area target="_parent" alt="" title="" href="#" coords="502,383,13" shape="circle" class="estacion" id="119"
+                name="Teatralna">
+            <area target="_parent" alt="" title="" href="#" coords="600,345,13" shape="circle" class="estacion" id="120"
+                name="Khreshchatyk">
+            <area target="_parent" alt="" title="" href="#" coords="688,345,13" shape="circle" class="estacion" id="121"
+                name="Arsenalna">
+            <area target="_parent" alt="" title="" href="#" coords="758,345,13" shape="circle" class="estacion" id="122"
+                name="Dnipro">
+            <area target="_parent" alt="" title="" href="#" coords="808,295,13" shape="circle" class="estacion" id="123"
+                name="Hidropark">
+            <area target="_parent" alt="" title="" href="#" coords="837,266,13" shape="circle" class="estacion" id="124"
+                name="Livoberezhna">
+            <area target="_parent" alt="" title="" href="#" coords="866.25,236.5,13" shape="circle" class="estacion"
+                id="125" name="Darnytsia">
+            <area target="_parent" alt="" title="" href="#" coords="905.5,196.5,13" shape="circle" class="estacion"
+                id="126" name="Chernihivska">
+            <area target="_parent" alt="" title="" href="#" coords="955.5,146.5,13" shape="circle" class="estacion"
+                id="127" name="Lisova">
+
+            <area target="_parent" alt="" title="" href="#" coords="576,27,13" shape="circle" class="estacion" id="210"
+                name="Heroiv-Dnipra">
+            <area target="_parent" alt="" title="" href="#" coords="576,67,13" shape="circle" class="estacion" id="211"
+                name="Minska">
+            <area target="_parent" alt="" title="" href="#" coords="576,107,13" shape="circle" class="estacion" id="212"
+                name="Obolon">
+            <area target="_parent" alt="" title="" href="#" coords="576,147,12" shape="circle" class="estacion" id="213"
+                name="Petrivka">
+            <area target="_parent" alt="" title="" href="#" coords="576,198,13" shape="circle" class="estacion" id="214"
+                name="Tarasa-Shevchenka">
+            <area target="_parent" alt="" title="" href="#" coords="576,235,13" shape="circle" class="estacion" id="215"
+                name="Kontraktova-ploshcha">
+            <area target="_parent" alt="" title="" href="#" coords="576,275,13" shape="circle" class="estacion" id="216"
+                name="Poshtova-ploshcha">
+            <area target="_parent" alt="" title="" href="#" coords="576,317,13" shape="circle" class="estacion" id="217"
+                name="Maidan-Nezalezhnosti">
+            <area target="_parent" alt="" title="" href="#" coords="576,437,13" shape="circle" class="estacion" id="218"
+                name="Ploshscha-Lva-Tolstoho">
+            <area target="_parent" alt="" title="" href="#" coords="576,491,13" shape="circle" class="estacion" id="219"
+                name="Olimpilska">
+            <area target="_parent" alt="" title="" href="#" coords="576,541,13" shape="circle" class="estacion" id="220"
+                name="Palats-Ukrayina">
+            <area target="_parent" alt="" title="" href="#" coords="576,604,13" shape="circle" class="estacion" id="221"
+                name="Lybidksa">
+            <area target="_parent" alt="" title="" href="#" coords="576,662,13" shape="circle" class="estacion" id="222"
+                name="Demiivska">
+            <area target="_parent" alt="" title="" href="#" coords="536,701,13" shape="circle" class="estacion" id="223"
+                name="Holosiivlska">
+            <area target="_parent" alt="" title="" href="#" coords="447,701,13" shape="circle" class="estacion" id="224"
+                name="Vasylkivska">
+            <area target="_parent" alt="" title="" href="#" coords="378,701,13" shape="circle" class="estacion" id="225"
+                name="Vystavkovyi-tsentr">
+            <area target="_parent" alt="" title="" href="#" coords="318,701,13" shape="circle" class="estacion" id="226"
+                name="Ipodrom">
+            <area target="_parent" alt="" title="" href="#" coords="248,701,13" shape="circle" class="estacion" id="227"
+                name="Teremky">
+
+            <area target="_parent" alt="" title="" href="#" coords="382,223,13" shape="circle" class="estacion" id="310"
+                name="Syrets">
+            <area target="_parent" alt="" title="" href="#" coords="422,263,13" shape="circle" class="estacion" id="311"
+                name="Dorohozhychi">
+            <area target="_parent" alt="" title="" href="#" coords="471,312,13" shape="circle" class="estacion" id="312"
+                name="Lukianivska">
+            <area target="_parent" alt="" title="" href="#" coords="501,343,13" shape="circle" class="estacion" id="314"
+                name="Zoloti-vorota">
+            <area target="_parent" alt="" title="" href="#" coords="603.5,405,13" shape="circle" class="estacion"
+                id="315" name="Palats-sportu">
+            <area target="_parent" alt="" title="" href="#" coords="679,424,13" shape="circle" class="estacion" id="316"
+                name="Klovska">
+            <area target="_parent" alt="" title="" href="#" coords="709,455,13" shape="circle" class="estacion" id="317"
+                name="Pecherska">
+            <area target="_parent" alt="" title="" href="#" coords="739.5,486,13" shape="circle" class="estacion"
+                id="318" name="Druzhby-narodiv">
+            <area target="_parent" alt="" title="" href="#" coords="770,516,13" shape="circle" class="estacion" id="319"
+                name="Vydubychi">
+            <area target="_parent" alt="" title="" href="#" coords="800.5,547,13" shape="circle" class="estacion"
+                id="321" name="Slavutych">
+            <area target="_parent" alt="" title="" href="#" coords="831,578,13" shape="circle" class="estacion" id="322"
+                name="Osokorky">
+            <area target="_parent" alt="" title="" href="#" coords="861,608.5,13" shape="circle" class="estacion"
+                id="323" name="Pozniaky">
+            <area target="_parent" alt="" title="" href="#" coords="891.75,639.25,13" shape="circle" class="estacion"
+                id="324" name="Kharkivska">
+            <area target="_parent" alt="" title="" href="#" coords="922,670,13" shape="circle" class="estacion" id="325"
+                name="Vyrlytsia">
+            <area target="_parent" alt="" title="" href="#" coords="965,670,13" shape="circle" class="estacion" id="326"
+                name="Boryspilska">
+            <area target="_parent" alt="" title="" href="#" coords="1008.5,670,13" shape="circle" class="estacion"
+                id="327" name="Chervonyi-khutir">
+        </map>
+    </div>
+    <!--<h2 class="mt-4 ms-4">Camino: <span id="camino"></span></h2>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+    <script src="scripts/bundle.js"></script>
+</body>
+
+</html>
