@@ -851,13 +851,11 @@ const textDestino = document.querySelector("#destinoText");
 const distancia = document.querySelector("#distancia");
 const transbordo = document.querySelector("#transbordo");
 
-let ready = false;
 
 let origen = undefined;
 let destino = undefined;
 
 const colorOrigen = "0389ff";
-const colorDestino = "0040ff";
 let color = colorOrigen;
 
 
@@ -932,20 +930,6 @@ $(function () {
         }
         reset();
     })
-
-    //$('.primero').click(function () {
-    //    let isClicked = $(this).data("maphilight");
-    //    if (isClicked) {
-    //        isClicked = false;
-    //        $(this).data('maphilight', isClicked).trigger('alwaysOn.maphilight');;
-    //        console.log("true: ", $(this));
-    //    } else {
-    //        isClicked = {};
-    //        isClicked.alwaysOn = true;
-    //        $(this).data('maphilight', isClicked).trigger('alwaysOn.maphilight');;
-    //        console.log("false: ", $(this));
-    //    }
-    //});
 })
 
 const clearMap = () => {
