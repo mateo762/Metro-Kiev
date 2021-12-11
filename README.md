@@ -11,7 +11,7 @@ En el código podemos encontrar los siguientes ficheros esenciales:
 - ***Algoritmo.js***: Contiene toda la lógica del Algoritmo A Estrella.
 
 
-- ***views/home.html*** : Conteiene la interfaz gráfica
+- ***views/home.html*** : Contiene la interfaz gráfica
 
 
 - ***data/***: Contiente 3 jsons con la información sobre las estaciones y sus conexiones.
