@@ -851,11 +851,13 @@ const textDestino = document.querySelector("#destinoText");
 const distancia = document.querySelector("#distancia");
 const transbordo = document.querySelector("#transbordo");
 
+let ready = false;
 
 let origen = undefined;
 let destino = undefined;
 
 const colorOrigen = "0389ff";
+const colorDestino = "0040ff";
 let color = colorOrigen;
 
 
@@ -885,7 +887,7 @@ $(function () {
             } else {
                 if (origen && !destino) {
                     destino = estacion.id;
-                    textDestino.textContent = destino.toString();
+                    textDestino.textContent = estacion.getAttribute('name');
                     estacion.station = "destino";
                     checkValid();
                     isClicked = {};
@@ -893,7 +895,7 @@ $(function () {
                     $(this).data('maphilight', isClicked).trigger('alwaysOn.maphilight');;
                 } else if (!destino || (destino && !origen)) {
                     origen = estacion.id;
-                    textOrigen.textContent = origen.toString();
+                    textOrigen.textContent = estacion.getAttribute('name');
                     estacion.station = "origen";
                     checkValid();
                     isClicked = {};
@@ -930,6 +932,20 @@ $(function () {
         }
         reset();
     })
+
+    //$('.primero').click(function () {
+    //    let isClicked = $(this).data("maphilight");
+    //    if (isClicked) {
+    //        isClicked = false;
+    //        $(this).data('maphilight', isClicked).trigger('alwaysOn.maphilight');;
+    //        console.log("true: ", $(this));
+    //    } else {
+    //        isClicked = {};
+    //        isClicked.alwaysOn = true;
+    //        $(this).data('maphilight', isClicked).trigger('alwaysOn.maphilight');;
+    //        console.log("false: ", $(this));
+    //    }
+    //});
 })
 
 const clearMap = () => {
