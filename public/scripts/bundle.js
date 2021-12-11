@@ -962,6 +962,8 @@ const reset = () => {
     button.disabled = true;
     textOrigen.textContent = ""
     textDestino.textContent = ""
+    distancia.textContent = "";
+    transbordo.textContent = "";
 }
 
 const checkValid = () => {
