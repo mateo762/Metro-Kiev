@@ -1,20 +1,19 @@
 # Metro-Kiev
 
-Proyecto para encontrar el camino más corto entre 2 estaciones del Metro de Kiev, se ha implementado con NodeJS y para la interfax gráfica se ha usado HTML, CSS y Boostrap. Se puede probar en
-[ http://metro-kiev.herokuapp.com/](url)
->**Estructura de la práctica**
+Artificial Intelligence project to find the shortest path between 2 subway stations in Kiev, implemented with NodeJS and for the graphical interface HTML, CSS and Boostrap were used. It can be tested [here](https://metro-kyiv.herokuapp.com/).
+>**Structure of the project**
 
 
-En el código podemos encontrar los siguientes ficheros esenciales:
+In the code we can find the following essential files:
 
 
-- ***Algoritmo.js***: Contiene toda la lógica del Algoritmo A Estrella.
+- ***Algoritmo.js***: Contains all the logic of the A Star Algorithm.
 
 
-- ***views/home.html*** : Contiene la interfaz gráfica
+- ***views/home.html*** : Contains the graphical interface.
 
 
-- ***data/***: Contiente 3 jsons con la información sobre las estaciones y sus conexiones.
+- ***data/***: Contains 3 jsons with information about the stations and their connections.
 
 
 
